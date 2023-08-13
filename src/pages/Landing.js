@@ -56,7 +56,7 @@ export function Landing(){
         let newMovie = {
             title: elements[0].value,
             year: elements[2].value,
-            genre: elements[4].value,
+            genre: [elements[4].value],
             rating: elements[5].value,
             director: elements[6].value,
             writer: elements[7].value,
