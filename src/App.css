@@ -1,38 +1,145 @@
-.App {
+*{
+  box-sizing: border-box;
+}
+.App{
+  width: 70%;
+  margin: 0 auto;
+}
+
+/* MainPage */
+.main-page{
+  position: relative;
+}
+
+/* NavBar */
+.nav-bar{
+  z-index: 99999;
+  position: sticky;
+  top: 0;
+  background-color: #333333;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-bar > input {
+  width: 40%;
+  height: 2rem;
+  padding: 0.4rem;
+  border: none;
+  border-radius: 2px;
+}
+.nav-bar > div > a {
+  display: flex;
+  position: relative;
+  color: white;
+  text-decoration-line: none;
+}
+.nav-link-container{
+  display: flex;
+  gap: 1rem;
+  font-size: 1.2rem;
+}
+.movies-filter-container{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0rem 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.movies-filter-container > select {
+  width: 8rem;
+  height: 1.5rem;
+  border-radius: 2px;
+}
+.movies-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-evenly;
+  padding: 1rem;
+}
+
+/* Card */
+.card{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  width: 15rem;
+  box-shadow: -1px 1px 5px 1px rgba(0, 0, 0, 0.377);
+  border-radius: 5px;
+}
+.card-title{
+  margin: 0;
+}
+.card-img{
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  object-fit: cover;
+  width: 100%;
+  height: 22rem;
+}
+.filter-btn{
+  cursor: pointer;
+  background-color: #333333;
+  border: none;
+  padding: .5rem;
+  color: white;
+  font-weight: bold;
+}
+.card-btn{
+  cursor: pointer;
+  background-color: #333333;
+  border: none;
+  padding: .5rem;
+  width: 90%;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.summary{
+  padding: 0rem 1rem; 
+}
+
+/*  Wishlist Page */
+.wishlist-title{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Movie Page */
+.single-page{
+  display: flex;
+  padding: 1rem;
+  gap: 1rem;
+}
+.singlepage-img{
+  width: 30rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Utils */
+.nodata{
+  text-align: center;
+  font-size: 1.5rem;
+}
+form {
+  background-color: white;
+  position: absolute;
+  left: calc(70%/2);
+  z-index: 999;
+  padding: 1rem;
+  border-radius: 5px;
+  width: 30%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  box-shadow: -1px 1px 5px 1px rgba(0, 0, 0, 0.377);
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form > input {
+  height: 2rem;
+  padding: .5rem;
+  margin-bottom: 0.5rem;
 }
