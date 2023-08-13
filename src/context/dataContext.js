@@ -4,7 +4,7 @@ import { movies } from "../db/data";
 const dataContext = createContext(null);
 
 export function DataWrapper({children}){
-    const [data, setData] = useState(JSON.parse(localStorage.getItem("Movies")));
+    const [data, setData] = useState(movies);
     const [input,setInput] = useState("");
     const [wishlist, setWishlist] = useState([]);
 
