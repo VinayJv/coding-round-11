@@ -11,7 +11,7 @@ export function Single(){
             <div>
                 <h2>{clickedMovie.title}</h2>
                 <p>{clickedMovie.summary}</p>
-                <p>Year: {clickedMovie.year}</p>
+                <p>Year: {clickedMovie.year ?? ""}</p>
                 <p>Genre: {clickedMovie.genre.map((genre,index)=><span key={index}>{genre}</span>) ?? ""}</p>
                 <p>Rating: {clickedMovie.rating ?? ""}</p>
                 <p>Director: {clickedMovie.director ?? ""}</p>
